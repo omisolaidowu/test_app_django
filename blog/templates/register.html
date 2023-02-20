@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register here as super-admin</title>
+</head>
+<body>
+<form action="." method="post">
+{% csrf_token %}
+<input required type="text" class="username-fill" name="username" placeholder="username"><br>
+<input required type="email" class="email-fill" name="email" placeholder="email address"><br>
+<input required type="password" class="password-fill" name="password" placeholder="password"><br>
+<input type="submit" name="Register">
+</form>
+{% for message in messages %}
+<div>{{ message }}</div>
+{% endfor %}
+</body>
+</html>
